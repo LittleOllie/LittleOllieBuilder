@@ -204,6 +204,25 @@ button:hover {
         height: auto; /* Adjust height for smaller screens */
     }
 }
+@media (max-width: 480px) {
+    #mainContent {
+        flex-direction: column;
+        align-items: center;
+    }
+    #traitPictures {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+    #characterDisplay {
+        width: 100%;
+        height: auto;
+    }
+    #randomizeButton {
+        order: 1;
+        margin-bottom: 20px;
+    }
+}
 </style>
 </head>
 <body>
@@ -239,6 +258,7 @@ button:hover {
             <img id="ball" alt="">
         </div>
         <button id="saveButton" onclick="saveCharacterImage()">Save Character</button>
+        <button id="randomizeButton" onclick="randomizeCharacter()">Randomize</button>
     </div>
 
     <div id="traitPictures">
@@ -570,6 +590,66 @@ button:hover {
             link.href = canvas.toDataURL('image/png');
             link.click();
         }).catch(error => console.error('Error capturing canvas:', error));
+    }
+
+    function randomizeCharacter() {
+        const backgroundOptions = document.querySelectorAll('#backgroundCategory img');
+        const skinOptions = document.querySelectorAll('#skinCategory img');
+        const faceOptions = document.querySelectorAll('#faceCategory img');
+        const clothingOptions = document.querySelectorAll('#clothingCategory img');
+        const hairOptions = document.querySelectorAll('#hairCategory img');
+        const hatOptions = document.querySelectorAll('#hatCategory img');
+        const hoodieOptions = document.querySelectorAll('#hoodieupCategory img');
+        const hairHoodieOptions = document.querySelectorAll('#hairhoodieCategory img');
+        const hatHoodieOptions = document.querySelectorAll('#hathoodieCategory img');
+        const accessoriesOptions = document.querySelectorAll('#accessoriesCategory img');
+        const handOptions = document.querySelectorAll('#handCategory img');
+
+        function getRandomElement(arr) {
+            const index = Math.floor(Math.random() * arr.length);
+            return arr[index].getAttribute('src');
+        }
+
+        // Always select these
+        selectTrait('background', getRandomElement(backgroundOptions));
+        selectTrait('skin', getRandomElement(skinOptions));
+        selectTrait('face', getRandomElement(faceOptions));
+
+        // Select combination 1 or 2
+        const combination = Math.random() < 0.5 ? 1 : 2;
+
+        if (combination === 1) {
+            selectTrait('clothing', getRandomElement(clothingOptions));
+            if (Math.random() < 0.5) {
+                selectTrait('hair', getRandomElement(hairOptions));
+                selectTrait('hat', ''); // Clear hat if hair is selected
+            } else {
+                selectTrait('hat', getRandomElement(hatOptions));
+                selectTrait('hair', ''); // Clear hair if hat is selected
+            }
+        } else {
+            selectTrait('clothing', getRandomElement(hoodieOptions));
+            if (Math.random() < 0.5) {
+                selectTrait('hair', getRandomElement(hairHoodieOptions));
+                selectTrait('hat', ''); // Clear hat if hair is selected
+            } else {
+                selectTrait('hat', getRandomElement(hatHoodieOptions));
+                selectTrait('hair', ''); // Clear hair if hat is selected
+            }
+        }
+
+        // Randomly select accessories and hand gestures occasionally
+        if (Math.random() < 0.5) {
+            selectTrait('accessories', getRandomElement(accessoriesOptions));
+        } else {
+            selectTrait('accessories', '');
+        }
+
+        if (Math.random() < 0.5) {
+            selectTrait('hand', getRandomElement(handOptions));
+        } else {
+            selectTrait('hand', '');
+        }
     }
 </script>
 </body>
