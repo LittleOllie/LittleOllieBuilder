@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 <style>
 body {
-    font-family: 'Fredoka One', cursive, sans-serif;
+    font-family: 'Fredoka One', cursive, sans-serif; /* Updated font-family */
     background-image: linear-gradient(to right, #89f7fe, #66a6ff);
     color: #333;
     margin: 0;
@@ -170,7 +170,7 @@ button:hover {
 }
 #randomButton {
     margin-top: 20px;
-    margin-bottom: 20px;
+    align-self: center;
 }
 @media (max-width: 768px) {
     body {
@@ -229,7 +229,7 @@ button:hover {
         <button class="category-button hathoodie-button" onclick="showCategory('hathoodieCategory')">HATS(HOODIES)</button>
         <button class="category-button ball-button" onclick="showCategory('ballCategory')">BALLS</button>
     </div>
-
+    
     <div id="characterDisplayContainer">
         <div id="characterDisplay">
             <img id="background" alt="">
@@ -238,15 +238,14 @@ button:hover {
             <img id="hair" alt="">
             <img id="hat" alt="">
             <img id="clothing" alt="">
-            <img id="hoodie" alt="">
             <img id="hairhoodie" alt="">
-            <img id="hathoodie" alt="">
+            <img id="hathoodie" alt="">            
+            <img id="hoodie" alt="">
             <img id="accessories" alt="">
             <img id="hand" alt="">
             <img id="ball" alt="">
         </div>
         <button id="saveButton" onclick="saveCharacterImage()">Save Character</button>
-        <button id="randomButton" onclick="randomizeCharacter()">Randomize Character</button>
     </div>
 
     <div id="traitPictures">
@@ -301,7 +300,7 @@ button:hover {
         </div>
         <div class="trait-category" id="hairCategory">
             <div class="trait-options">
-                <img src="HAIR/A.PNG" alt="No Hair" onclick="selectTrait('hair', 'HAIR/AA.PNG')">
+                <img src="HAIR/A.PNG" alt="No Hair" onclick="selectTrait('hair', 'HAIR/A.PNG')">
                 <img src="HAIR/29.PNG" alt="White 1" onclick="selectTrait('hair', 'HAIR/29.PNG')">
                 <img src="HAIR/33.PNG" alt="White 2" onclick="selectTrait('hair', 'HAIR/33.PNG')">
                 <img src="HAIR/37.PNG" alt="White 3" onclick="selectTrait('hair', 'HAIR/37.PNG')">
@@ -338,7 +337,7 @@ button:hover {
         </div>
         <div class="trait-category" id="hairhoodieCategory">
             <div class="trait-options">
-                <img src="HAIRHOODIEUP/A.PNG" alt="No Hair" onclick="selectTrait('hairhoodie', 'HAIRHOODIEUP/AA.PNG')">
+                <img src="HAIRHOODIEUP/A.PNG" alt="No Hair" onclick="selectTrait('hairhoodie', 'HAIRHOODIEUP/A.PNG')">
                 <img src="HAIRHOODIEUP/9.PNG" alt="White 1" onclick="selectTrait('hairhoodie', 'HAIRHOODIEUP/9.PNG')">
                 <img src="HAIRHOODIEUP/13.PNG" alt="White 2" onclick="selectTrait('hairhoodie', 'HAIRHOODIEUP/13.PNG')">
                 <img src="HAIRHOODIEUP/21.PNG" alt="White 3" onclick="selectTrait('hairhoodie', 'HAIRHOODIEUP/21.PNG')">
@@ -431,7 +430,7 @@ button:hover {
         </div>
         <div class="trait-category" id="accessoriesCategory">
             <div class="trait-options">
-                <img src="GLASSES/A.PNG" alt="No Glasses" onclick="selectTrait('accessories', 'GLASSES/AA.PNG')">
+                <img src="GLASSES/A.PNG" alt="No Glasses" onclick="selectTrait('accessories', 'GLASSES/A.PNG')">
                 <img src="GLASSES/1.PNG" alt="Pit Vipers" onclick="selectTrait('accessories', 'GLASSES/1.PNG')">
                 <img src="GLASSES/8.PNG" alt="VR" onclick="selectTrait('accessories', 'GLASSES/8.PNG')">
                 <img src="GLASSES/9.PNG" alt="CRAZY" onclick="selectTrait('accessories', 'GLASSES/9.PNG')">
@@ -445,7 +444,7 @@ button:hover {
         </div>
         <div class="trait-category" id="hatCategory">
             <div class="trait-options">
-                <img src="HATS/A.PNG" alt="No Hat" onclick="selectTrait('hat', 'HATS/AA.PNG')">
+                <img src="HATS/A.PNG" alt="No Hat" onclick="selectTrait('hat', 'HATS/A.PNG')">
                 <img src="HATS/1.PNG" alt="Blue Beanie" onclick="selectTrait('hat', 'HATS/1.PNG')">
                 <img src="HATS/2.PNG" alt="Black Beanie" onclick="selectTrait('hat', 'HATS/2.PNG')">
                 <img src="HATS/4.PNG" alt="White Beanie" onclick="selectTrait('hat', 'HATS/4.PNG')">
@@ -486,7 +485,7 @@ button:hover {
         </div>
         <div class="trait-category" id="hathoodieCategory">
             <div class="trait-options">
-                <img src="HATS/A.PNG" alt="No Hat" onclick="selectTrait('hathoodie', 'HATS/AA.PNG')">
+                <img src="HATS/A.PNG" alt="No Hat" onclick="selectTrait('hathoodie', 'HATS/A.PNG')">
                 <img src="HATS/1.PNG" alt="Blue Beanie" onclick="selectTrait('hathoodie', 'HATS/1.PNG')">
                 <img src="HATS/2.PNG" alt="Black Beanie" onclick="selectTrait('hathoodie', 'HATS/2.PNG')">
                 <img src="HATS/4.PNG" alt="White Beanie" onclick="selectTrait('hathoodie', 'HATS/4.PNG')">
@@ -509,7 +508,7 @@ button:hover {
         </div>
         <div class="trait-category" id="handCategory">
             <div class="trait-options">
-                <img src="HANDS/A.PNG" alt="No Hand Gesture" onclick="selectTrait('hand', 'HANDS/AA.PNG')">
+                <img src="HANDS/A.PNG" alt="No Hand Gesture" onclick="selectTrait('hand', 'HANDS/A.PNG')">
                 <img src="HANDS/12.PNG" alt="Skin 1 Shaka" onclick="selectTrait('hand', 'HANDS/12.PNG')">
                 <img src="HANDS/13.PNG" alt="Skin 2 Shaka" onclick="selectTrait('hand', 'HANDS/13.PNG')">
                 <img src="HANDS/14.PNG" alt="Skin 3 Shaka" onclick="selectTrait('hand', 'HANDS/14.PNG')">
@@ -546,7 +545,7 @@ button:hover {
         </div>
         <div class="trait-category" id="ballCategory">
             <div class="trait-options">
-                <img src="HAND-BALLS/A.PNG" alt="No Ball" onclick="selectTrait('ball', 'HAND-BALLS/AA.PNG')">
+                <img src="HAND-BALLS/A.PNG" alt="No Ball" onclick="selectTrait('ball', 'HAND-BALLS/A.PNG')">
                 <img src="HAND-BALLS/1.PNG" alt="Soccer Ball" onclick="selectTrait('ball', 'HAND-BALLS/1.PNG')">
                 <img src="HAND-BALLS/2.PNG" alt="Basketball" onclick="selectTrait('ball', 'HAND-BALLS/2.PNG')">
             </div>
@@ -580,19 +579,21 @@ button:hover {
         }).catch(error => console.error('Error capturing canvas:', error));
     }
 
-    function randomizeCharacter() {
+    function randomizeTraits() {
         const backgroundOptions = ["BACKGROUNDS/1.PNG", "BACKGROUNDS/IMG_1529.PNG", "BACKGROUNDS/IMG_1530.PNG", "BACKGROUNDS/IMG_1531.PNG", "BACKGROUNDS/IMG_1532.PNG", "BACKGROUNDS/2.PNG", "BACKGROUNDS/3.PNG", "BACKGROUNDS/4.PNG", "BACKGROUNDS/13.PNG", "BACKGROUNDS/5.PNG", "BACKGROUNDS/6.PNG", "BACKGROUNDS/7.PNG", "BACKGROUNDS/8.PNG", "BACKGROUNDS/9.PNG", "BACKGROUNDS/10.PNG", "BACKGROUNDS/11.PNG", "BACKGROUNDS/12.PNG", "BACKGROUNDS/14.PNG", "BACKGROUNDS/15.PNG", "BACKGROUNDS/16.PNG", "BACKGROUNDS/17.PNG", "BACKGROUNDS/18.PNG", "BACKGROUNDS/19.PNG", "BACKGROUNDS/20.PNG", "BACKGROUNDS/21.PNG"];
         const skinOptions = ["SKIN/1.PNG", "SKIN/2.PNG", "SKIN/3.PNG", "SKIN/4.PNG"];
         const faceOptions = ["FACE/1.PNG", "FACE/1A.PNG", "FACE/2.PNG", "FACE/3.PNG", "FACE/4.PNG", "FACE/5.PNG", "FACE/6.PNG", "FACE/7.PNG"];
         const clothingOptions = ["CLOTHING/1.PNG", "CLOTHING/2.PNG", "CLOTHING/6.PNG", "CLOTHING/4.PNG", "CLOTHING/5.PNG", "CLOTHING/3.PNG", "CLOTHING/7.PNG", "CLOTHING/8.PNG", "CLOTHING/9.PNG", "CLOTHING/10.PNG", "CLOTHING/11.PNG", "CLOTHING/13A.PNG", "CLOTHING/27.PNG", "CLOTHING/28.PNG", "CLOTHING/14.PNG", "CLOTHING/12.PNG", "CLOTHING/23.PNG", "CLOTHING/29.PNG", "CLOTHING/30.PNG", "CLOTHING/31.PNG", "CLOTHING/32.PNG", "CLOTHING/34.PNG", "CLOTHING/35.PNG", "CLOTHING/36.PNG", "CLOTHING/37.PNG", "CLOTHING/38.PNG", "CLOTHING/25.PNG", "CLOTHING/24.PNG", "CLOTHING/26.PNG", "CLOTHING/16.PNG", "CLOTHING/17.PNG", "CLOTHING/18.PNG", "CLOTHING/19.PNG", "CLOTHING/21.PNG", "CLOTHING/20.PNG", "CLOTHING/22.PNG"];
         const hairOptions = ["HAIR/A.PNG", "HAIR/29.PNG", "HAIR/33.PNG", "HAIR/37.PNG", "HAIR/41.PNG", "HAIR/45.PNG", "HAIR/49.PNG", "HAIR/53.PNG", "HAIR/57.PNG", "HAIR/30.PNG", "HAIR/34.PNG", "HAIR/38.PNG", "HAIR/42.PNG", "HAIR/46.PNG", "HAIR/50.PNG", "HAIR/54.PNG", "HAIR/58.PNG", "HAIR/31.PNG", "HAIR/35.PNG", "HAIR/39.PNG", "HAIR/43.PNG", "HAIR/47.PNG", "HAIR/51.PNG", "HAIR/55.PNG", "HAIR/59.PNG", "HAIR/32.PNG", "HAIR/36.PNG", "HAIR/40.PNG", "HAIR/44.PNG", "HAIR/48.PNG", "HAIR/52.PNG", "HAIR/56.PNG", "HAIR/60.PNG"];
-        const hatOptions = ["HATS/A.PNG", "HATS/1.PNG", "HATS/2.PNG", "HATS/4.PNG", "HATS/3.PNG", "HATS/33.PNG", "HATS/15.PNG", "HATS/16.PNG", "HATS/17.PNG", "HATS/18.PNG", "HATS/19.PNG", "HATS/20.PNG", "HATS/21.PNG", "HATS/39.PNG", "HATS/22.PNG", "HATS/23.PNG", "HATS/24.PNG", "HATS/38.PNG", "HATS/25.PNG", "HATS/26.PNG", "HATS/27.PNG", "HATS/40.PNG", "HATS/28.PNG", "HATS/29.PNG", "HATS/30.PNG", "HATS/41.PNG", "HATS/31.PNG", "HATS/32.PNG", "HATS/35.PNG", "HATS/44.PNG", "HATS/45.PNG", "HATS/34.PNG", "HATS/7.PNG", "HATS/36.PNG", "HATS/37.PNG", "HATS/42.PNG", "HATS/43.PNG"];
         const hoodieOptions = ["CLOTHING/1A.PNG", "CLOTHING/2A.PNG", "CLOTHING/6A.PNG", "CLOTHING/4A.PNG", "CLOTHING/5A.PNG", "CLOTHING/3A.PNG", "CLOTHING/7A.PNG", "CLOTHING/8A.PNG", "CLOTHING/9A.PNG", "CLOTHING/10A.PNG", "CLOTHING/11A.PNG", "CLOTHING/13.PNG", "CLOTHING/27A.PNG", "CLOTHING/28A.PNG", "CLOTHING/14A.PNG", "CLOTHING/12A.PNG"];
-        const hairhoodieOptions = ["HAIRHOODIEUP/A.PNG", "HAIRHOODIEUP/9.PNG", "HAIRHOODIEUP/13.PNG", "HAIRHOODIEUP/21.PNG", "HAIRHOODIEUP/17.PNG", "HAIRHOODIEUP/1.PNG", "HAIRHOODIEUP/5.PNG", "HAIRHOODIEUP/25.PNG", "HAIRHOODIEUP/10.PNG", "HAIRHOODIEUP/14.PNG", "HAIRHOODIEUP/22.PNG", "HAIRHOODIEUP/18.PNG", "HAIRHOODIEUP/2.PNG", "HAIRHOODIEUP/6.PNG", "HAIRHOODIEUP/26.PNG", "HAIRHOODIEUP/11.PNG", "HAIRHOODIEUP/15.PNG", "HAIRHOODIEUP/23.PNG", "HAIRHOODIEUP/19.PNG", "HAIRHOODIEUP/3.PNG", "HAIRHOODIEUP/7.PNG", "HAIRHOODIEUP/27.PNG", "HAIRHOODIEUP/12.PNG", "HAIRHOODIEUP/16.PNG", "HAIRHOODIEUP/24.PNG", "HAIRHOODIEUP/20.PNG", "HAIRHOODIEUP/4.PNG", "HAIRHOODIEUP/8.PNG", "HAIRHOODIEUP/28.PNG"];
-        const hathoodieOptions = ["HATS/A.PNG", "HATS/1.PNG", "HATS/2.PNG", "HATS/4.PNG", "HATS/3.PNG", "HATS/33.PNG", "HATS/19.PNG", "HATS/20.PNG", "HATS/21.PNG", "HATS/22.PNG", "HATS/23.PNG", "HATS/24.PNG", "HATS/25.PNG", "HATS/26.PNG", "HATS/27.PNG", "HATS/28.PNG", "HATS/29.PNG", "HATS/30.PNG", "HATS/42.PNG"];
+        const hairHoodieOptions = ["HAIRHOODIEUP/A.PNG", "HAIRHOODIEUP/9.PNG", "HAIRHOODIEUP/13.PNG", "HAIRHOODIEUP/21.PNG", "HAIRHOODIEUP/17.PNG", "HAIRHOODIEUP/1.PNG", "HAIRHOODIEUP/5.PNG", "HAIRHOODIEUP/25.PNG", "HAIRHOODIEUP/10.PNG", "HAIRHOODIEUP/14.PNG", "HAIRHOODIEUP/22.PNG", "HAIRHOODIEUP/18.PNG", "HAIRHOODIEUP/2.PNG", "HAIRHOODIEUP/6.PNG", "HAIRHOODIEUP/26.PNG", "HAIRHOODIEUP/11.PNG", "HAIRHOODIEUP/15.PNG", "HAIRHOODIEUP/23.PNG", "HAIRHOODIEUP/19.PNG", "HAIRHOODIEUP/3.PNG", "HAIRHOODIEUP/7.PNG", "HAIRHOODIEUP/27.PNG", "HAIRHOODIEUP/12.PNG", "HAIRHOODIEUP/16.PNG", "HAIRHOODIEUP/24.PNG", "HAIRHOODIEUP/20.PNG", "HAIRHOODIEUP/4.PNG", "HAIRHOODIEUP/8.PNG", "HAIRHOODIEUP/28.PNG"];
+        const hatOptions = ["HATS/A.PNG", "HATS/1.PNG", "HATS/2.PNG", "HATS/4.PNG", "HATS/3.PNG", "HATS/33.PNG", "HATS/15.PNG", "HATS/16.PNG", "HATS/17.PNG", "HATS/18.PNG", "HATS/19.PNG", "HATS/20.PNG", "HATS/21.PNG", "HATS/39.PNG", "HATS/22.PNG", "HATS/23.PNG", "HATS/24.PNG", "HATS/38.PNG", "HATS/25.PNG", "HATS/26.PNG", "HATS/27.PNG", "HATS/40.PNG", "HATS/28.PNG", "HATS/29.PNG", "HATS/30.PNG", "HATS/41.PNG", "HATS/31.PNG", "HATS/32.PNG", "HATS/35.PNG", "HATS/44.PNG", "HATS/45.PNG", "HATS/34.PNG", "HATS/7.PNG", "HATS/36.PNG", "HATS/37.PNG", "HATS/42.PNG", "HATS/43.PNG"];
+        const hatHoodieOptions = ["HATS/A.PNG", "HATS/1.PNG", "HATS/2.PNG", "HATS/4.PNG", "HATS/3.PNG", "HATS/33.PNG", "HATS/19.PNG", "HATS/20.PNG", "HATS/21.PNG", "HATS/22.PNG", "HATS/23.PNG", "HATS/24.PNG", "HATS/25.PNG", "HATS/26.PNG", "HATS/27.PNG", "HATS/28.PNG", "HATS/29.PNG", "HATS/30.PNG", "HATS/42.PNG"];
         const accessoriesOptions = ["GLASSES/A.PNG", "GLASSES/1.PNG", "GLASSES/8.PNG", "GLASSES/9.PNG", "GLASSES/2.PNG", "GLASSES/3.PNG", "GLASSES/4.PNG", "GLASSES/5.PNG", "GLASSES/6.PNG", "GLASSES/7.PNG"];
         const handOptions = ["HANDS/A.PNG", "HANDS/12.PNG", "HANDS/13.PNG", "HANDS/14.PNG", "HANDS/15.PNG", "HANDS/8.PNG", "HANDS/9.PNG", "HANDS/10.PNG", "HANDS/11.PNG", "HANDS/16.PNG", "HANDS/17.PNG", "HANDS/18.PNG", "HANDS/19.PNG", "HANDS/20.PNG", "HANDS/21.PNG", "HANDS/22.PNG", "HANDS/23.PNG", "HANDS/1.PNG", "HANDS/1A.PNG", "HANDS/1B.PNG", "HANDS/1C.PNG", "HANDS/2.PNG", "HANDS/2A.PNG", "HANDS/2B.PNG", "HANDS/2C.PNG", "HANDS/3.PNG", "HANDS/3A.PNG", "HANDS/3B.PNG", "HANDS/3C.PNG", "HANDS/4.PNG", "HANDS/5.PNG", "HANDS/6.PNG", "HANDS/7.PNG"];
         const ballOptions = ["HAND-BALLS/A.PNG", "HAND-BALLS/1.PNG", "HAND-BALLS/2.PNG"];
+
+        const useClothing = Math.random() > 0.5;
 
         const randomBackground = backgroundOptions[Math.floor(Math.random() * backgroundOptions.length)];
         const randomSkin = skinOptions[Math.floor(Math.random() * skinOptions.length)];
@@ -601,40 +602,38 @@ button:hover {
         const randomHand = handOptions[Math.floor(Math.random() * handOptions.length)];
         const randomBall = ballOptions[Math.floor(Math.random() * ballOptions.length)];
 
-        let randomCombination = Math.random() < 0.5 ? 1 : 2;
-        if (randomCombination === 1) {
+        selectTrait('background', randomBackground);
+        selectTrait('skin', randomSkin);
+        selectTrait('face', randomFace);
+        selectTrait('accessories', randomAccessories);
+        selectTrait('hand', randomHand);
+        selectTrait('ball', randomBall);
+
+        if (useClothing) {
             const randomClothing = clothingOptions[Math.floor(Math.random() * clothingOptions.length)];
             const randomHair = hairOptions[Math.floor(Math.random() * hairOptions.length)];
             const randomHat = hatOptions[Math.floor(Math.random() * hatOptions.length)];
 
-            selectTrait('background', randomBackground);
-            selectTrait('skin', randomSkin);
-            selectTrait('face', randomFace);
             selectTrait('clothing', randomClothing);
             selectTrait('hair', randomHair);
             selectTrait('hat', randomHat);
-            selectTrait('hoodie', '');
-            selectTrait('hairhoodie', '');
-            selectTrait('hathoodie', '');
+
+            selectTrait('hoodie', "");
+            selectTrait('hairhoodie', "");
+            selectTrait('hathoodie', "");
         } else {
             const randomHoodie = hoodieOptions[Math.floor(Math.random() * hoodieOptions.length)];
-            const randomHairhoodie = hairhoodieOptions[Math.floor(Math.random() * hairhoodieOptions.length)];
-            const randomHathoodie = hathoodieOptions[Math.floor(Math.random() * hathoodieOptions.length)];
+            const randomHairHoodie = hairHoodieOptions[Math.floor(Math.random() * hairHoodieOptions.length)];
+            const randomHatHoodie = hatHoodieOptions[Math.floor(Math.random() * hatHoodieOptions.length)];
 
-            selectTrait('background', randomBackground);
-            selectTrait('skin', randomSkin);
-            selectTrait('face', randomFace);
             selectTrait('hoodie', randomHoodie);
-            selectTrait('hairhoodie', randomHairhoodie);
-            selectTrait('hathoodie', randomHathoodie);
-            selectTrait('clothing', '');
-            selectTrait('hair', '');
-            selectTrait('hat', '');
-        }
+            selectTrait('hairhoodie', randomHairHoodie);
+            selectTrait('hathoodie', randomHatHoodie);
 
-        selectTrait('accessories', randomAccessories);
-        selectTrait('hand', randomHand);
-        selectTrait('ball', randomBall);
+            selectTrait('clothing', "");
+            selectTrait('hair', "");
+            selectTrait('hat', "");
+        }
     }
 </script>
 </body>
