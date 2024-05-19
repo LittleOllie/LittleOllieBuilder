@@ -178,14 +178,31 @@ button:hover {
         width: 90%;
         margin-left: 0;
         margin-top: 20px;
+        order: 2;
     }
     #characterDisplayContainer {
         margin: 0;
         width: 90%;
+        order: 1;
     }
     #characterDisplay {
         width: 100%;
         height: auto;
+    }
+}
+@media (max-width: 480px) {
+    .category-button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+    #characterDisplay {
+        width: 300px;
+        height: 300px;
+    }
+    #traitPictures {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
     }
 }
 </style>
